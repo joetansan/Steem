@@ -1,23 +1,34 @@
-body {
-    margin: 0px;
+* {
+    text-decoration: none;
+    box-sizing: border-box;
 }
 
-*{
-    text-decoration: none;
+body {
+    margin: 0px 0px 0px 0px;
+    padding: 0;
+    background: rgb(0, 0, 47);
 }
 
 .navbar {
-    background-color: darkslategray;
+    background-color: rgb(19, 43, 113);
     font-family: calibri;
-    padding-left: 15px;
+    /* i dont think we need this - yc
+    padding-left: 15px; 
     padding-right: 15px;
+    */
+    margin: 0;
+    padding: 0;
 }
 
 /* div for nav */
 .navdiv {
-    display: flex;
+    display: flex;  
     align-items: center;
     justify-content: space-between;
+}
+
+.navdiv ul {
+    /* might put stuff here*/
 }
 
 /* list containing links */
@@ -28,21 +39,75 @@ body {
 
 /* Links */
 .navdiv ul li a {
-    color: white;
+    color: rgb(102, 126, 173);
     font-size: 20px;
     font-weight: bold;
-    margin: 25px
+    text-transform: uppercase;
+    margin: 20px;
+}
+
+ul {
+    flex-grow: 1;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
 }
 
 .brand a {
-    font-size: 35px;
+    display: flex;
+    align-items: center;
     font-weight: bold;
+    font-size: 30px;
 }
 
-div.brand a span.brand_name {
-    color: lightgrey;
-    float: right;
-    padding-left: 25px;
-    padding-top: 25px;
-    
+.brand a img {
+    /* padding takes top, right, bottom, left */
+    padding: 10px 30px 10px;
+    height: 75px;
 }
+.brand_name {   
+    color: rgb(102, 126, 173);
+    text-transform: uppercase;
+}
+
+div.profile {
+    padding-right: 25px;
+}
+
+div.products {
+    margin: 1% 2% 1% 2%;
+    /* bg color is only for debug purposes
+    background-color: azure;
+    */
+}
+
+div.productbox {
+    background: rgb(160, 176, 251);
+    width: 375px;
+    height: 225px;
+}
+
+#product_img {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, sans-serif;
+    font-size: large;
+}
+
+table.product_table {
+    border-spacing: 15px;
+}
+
+main {
+    margin: 0;
+    padding: 0px;
+
+}
+/* Responsive design (to do)
+
+@media (max-width: 952px)
+    .brand a{
+        
+    }
+
+*/
