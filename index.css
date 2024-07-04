@@ -40,6 +40,7 @@ body {
 }
 
 div.brand a span.brand_name {
+    color: lightgrey;
     float: right;
     padding-left: 25px;
     padding-top: 25px;
