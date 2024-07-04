@@ -1,5 +1,47 @@
-/* Remove navbar default rounded borders and increase the bottom margin */ 
+body {
+    margin: 0px;
+}
+
+*{
+    text-decoration: none;
+}
+
 .navbar {
-    margin-bottom: 50px;
-    border-radius: 0;
+    background-color: darkslategray;
+    font-family: calibri;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* div for nav */
+.navdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* list containing links */
+.navdiv ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+/* Links */
+.navdiv ul li a {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 25px
+}
+
+.brand a {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+div.brand a span.brand_name {
+    float: right;
+    padding-left: 25px;
+    padding-top: 25px;
+    
 }
