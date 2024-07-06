@@ -1,17 +1,23 @@
 * {
-    text-decoration: none;
+    text-decoration: none; /* remove text underline */
     box-sizing: border-box;
 }
+
+@font-face {
+    font-family: "Motiva Sans";
+    src: url(fonts/MotivaSans-Regular.ttf) format("truetype");
+  }
+  
 
 body {
     margin: 0px 0px 0px 0px;
     padding: 0;
-    background: rgb(0, 0, 47);
+    background: #1b2838
 }
 
 .navbar {
-    background-color: rgb(19, 43, 113);
-    font-family: calibri;
+    background-color: #171d25;
+    font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
     /* i dont think we need this - yc
     padding-left: 15px; 
     padding-right: 15px;
@@ -27,10 +33,6 @@ body {
     justify-content: space-between;
 }
 
-.navdiv ul {
-    /* might put stuff here*/
-}
-
 /* list containing links */
 .navdiv ul li {
     list-style: none;
@@ -38,38 +40,33 @@ body {
 }
 
 /* Links */
-.navdiv ul li a {
-    color: rgb(102, 126, 173);
+.navdiv .nav_links li a {
+    color: #dcdedf;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 650;
     text-transform: uppercase;
     margin: 20px;
 }
 
-ul {
+.navdiv ul.nav_links {
     flex-grow: 1;
-}
-
-.brand {
-    display: flex;
-    align-items: center;
 }
 
 .brand a {
     display: flex;
     align-items: center;
-    font-weight: bold;
-    font-size: 30px;
 }
 
-.brand a img {
-    /* padding takes top, right, bottom, left */
+.brand a .logo {
+    /* padding takes values in this order: top, right, bottom, left */
     padding: 10px 30px 10px;
-    height: 75px;
+    height: 75px;   
 }
 .brand_name {   
-    color: rgb(102, 126, 173);
+    color: #b4b4b4; 
     text-transform: uppercase;
+    font-weight: 500;
+    font-size: 32px;
 }
 
 div.profile {
@@ -78,7 +75,7 @@ div.profile {
 
 div.products {
     margin: 1% 2% 1% 2%;
-    /* bg color is only for debug purposes
+    /* bg color for debug purposes
     background-color: azure;
     */
 }
@@ -87,11 +84,20 @@ div.productbox {
     background: rgb(160, 176, 251);
     width: 375px;
     height: 225px;
+    padding-right: 10%;
+    padding-bottom: 10%;
 }
 
 #product_img {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, sans-serif;
-    font-size: large;
+    height: 100%;
+    width: 100%;
+}
+
+#product_name {
+    font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: #171d25;
 }
 
 table.product_table {
@@ -100,14 +106,10 @@ table.product_table {
 
 main {
     margin: 0;
-    padding: 0px;
-
+    padding: 0;
 }
-/* Responsive design (to do)
 
-@media (max-width: 952px)
-    .brand a{
-        
-    }
-
-*/
+/* links turn white when hovered over */
+ul.nav_links a:hover {
+    color: #ffffff;
+}
