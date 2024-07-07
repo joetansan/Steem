@@ -14,6 +14,7 @@ body {
     padding: 0;
     background: #1b2838;
     min-height: 100vh;
+
 }
 
 /* NAVIGATION BAR ######################################################## */
@@ -74,12 +75,23 @@ body {
     color: #b4b4b4; 
     text-transform: uppercase;
     font-weight: 500;
-    font-size: 32px;
+    font-size: 30px;
 }
 
-div.profile a{
-    color: #ffffff;
-    padding-right: 20px;
+div.shopping-cart a {
+    color: #dcdedf;
+}
+
+div.profile a {
+    color: #dcdedf;
+}
+
+div.shopping-cart {
+    margin-right: 30px;
+}
+
+div.profile {
+    margin-right: 30px;
 }
 
 /* links turn white when hovered over */
@@ -104,19 +116,19 @@ div.productbox {
     padding-bottom: 10%;
 }
 
-#product_img {
+#product-img {
     height: 100%;
     width: 100%;
 }
 
-#product_name {
+#product-name {
     font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
     font-weight: 700;
     font-size: 15px;
     color: #171d25;
 }
 
-table.product_table {
+table.product-table {
     border-spacing: 15px;
 }
 
@@ -168,7 +180,7 @@ footer {
 }
 
 .wrapper .footer-widget .footer-logo {
-    height: 150px;
+    height: 120px;
     vertical-align: middle;
 }
 
@@ -193,11 +205,70 @@ footer {
     height: 44px;
     margin-right: 10px;
     color: #ffffff;
-    background-color: rgba(35, 52, 72, 0.5);
+    background-color: rgba(27, 40, 56, 0.7);
     border-radius: 50%;
     font-size: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease-out;
+}
+
+.wrapper .footer-widget .socials li a:hover {
+    background-color: rgba(35, 52, 72, 0.8);;
+}
+
+.wrapper .footer-widget h6 {
+    color: #adb9c2;
+    margin: 10px 0 35px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.wrapper .footer-widget .links {
+    padding-left: 0
+}
+
+.wrapper .footer-widget .links li {
+    list-style: none;
+}
+
+.wrapper .footer-widget .links li a {
+    color: #c6d4df;
+    font-size: 16px;
+    text-transform: capitalize;
+    line-height: 32px;
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .footer-widget .links li a:hover {
+    color: #ffffff;
+}
+
+.copyright-wrapper {
+    padding: 20px 0;
+    border-top: 1px solid #223245;
+    color: #8f98a0;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Responsive web design (footer only)*/
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+        
+    .wrapper .footer-widget,
+    .wrapper .footer-widget:nth-child(1) {
+        width: calc(50% - 30px);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 720px;
+        margin: 0 10px 50px;
+    }
 }

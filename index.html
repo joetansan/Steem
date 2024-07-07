@@ -1,9 +1,12 @@
 <!--Home page-->
-
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <title>Welcome to Steem</title>
         <link rel="stylesheet" href="css/index.css">
+        <!-- favicon -->
+        <link rel="icon" href="favicon.ico">
+
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
@@ -21,6 +24,11 @@
                         <li><a href="about.html">About</a></li>
                         <li><a href="contactus.html">Contact Us</a></li>
                     </ul>
+                    <div class="shopping-cart">
+                        <a href="payment.html">
+                            <i class="fa-solid fa-cart-shopping fa-2xl"></i>
+                        </a>
+                    </div>
                     <div class="profile">
                         <a href="profile.html">
                             <i class="fa-solid fa-user fa-2xl"></i>
@@ -31,46 +39,48 @@
         </header>
         <main>
             <div class="products">
-                <table class="product_table">
-                   <td>
-                        <div class="productbox">
-                            <img id="product_img" src="media/Obomba.webp"/>
-                            <span id="product_name">Obomba: Gaza Edition</span>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="productbox">
-                            <img id="product_img" src="media/Obomba.webp"/>
-                            <span id="product_name">Obomba: Gaza Edition</span>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="productbox">
-                            <img id="product_img" src="media/Obomba.webp"/>
-                            <span id="product_name">Obomba: Gaza Edition</span>
-                        </div>
-                    </td>
-               </table>
-               <table class="product_table">
-                <td>
-                     <div class="productbox">
-                         <img id="product_img" src="media/Obomba.webp"/>
-                         <span id="product_name">Obomba: Gaza Edition</span>
-                     </div>
-                 </td>
-                 <td>
-                     <div class="productbox">
-                         <img id="product_img" src="media/Obomba.webp"/>
-                         <span id="product_name">Obomba: Gaza Edition</span>
-                     </div>
-                 </td>
-                 <td>
-                     <div class="productbox">
-                         <img id="product_img" src="media/Obomba.webp"/>
-                         <span id="product_name">Obomba: Gaza Edition</span>
-                     </div>
-                 </td>
-            </table>
+                <table class="product-table">
+                    <tr class="product-row">
+                        <td>
+                            <div class="productbox">
+                                <img id="product-img" src="media/Obomba.webp"/>
+                                <span id="product-name">Obomba: Gaza Edition</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="productbox">
+                                <img id="product-img" src="media/Obomba.webp"/>
+                                <span id="product-name">Obomba: Gaza Edition</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="productbox">
+                                <img id="product-img" src="media/Obomba.webp"/>
+                                <span id="product-name">Obomba: Gaza Edition</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="product-row">
+                        <td>
+                            <div class="productbox">
+                                <img id="product-img" src="media/Obomba.webp"/>
+                                <span id="product-name">Obomba: Gaza Edition</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="productbox">
+                                <img id="product-img" src="media/Obomba.webp"/>
+                                <span id="product-name">Obomba: Gaza Edition</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="productbox">
+                                <img id="product-img" src="media/Obomba.webp"/>
+                                <span id="product-name">Obomba: Gaza Edition</span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
             </div>
         </main>
         <footer>
@@ -78,7 +88,7 @@
                 <div class="wrapper">
                     <div class="footer-widget">
                         <a href="#">
-                            <img src="images/logo.png" class="footer-logo">
+                            <img src="images/logo-brand-grey.png" class="footer-logo">
                         </a>
                         <p class="desc">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac porta arcu, nec malesuada lorem. Liquam
@@ -96,7 +106,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="https://www.instagram.com/yawchor_tan/">
                                     <i class="fa-brands fa-instagram"></i>
                                 </a>
                             </li>
@@ -105,24 +115,24 @@
                     <div class="footer-widget">
                         <h6>Quick Links</h6>
                         <ul class="links">
-                            <li><a href="#"></a>Home</li>
-                            <li><a href="about.html"></a>About</li>
-                            <li><a href="contactus.html"></a>Contact Us</li>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contactus.html">Contact Us</a></li>
                         </ul>
                     </div>
                     <div class="footer-widget">
                         <h6>Help &amp; Support</h6>
                         <ul class="links">
-                            <li><a href="#"></a>FAQ</li>
-                            <li><a href="#"></a>Support Center</li>
-                            <li><a href="#"></a>Live Chat</li>
-                            <li><a href="#"></a>Terms &amp; Conditions</li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Support Center</a></li>
+                            <li><a href="#">Live Chat</a></li>
+                            <li><a href="#">Terms &amp; Conditions</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="copyright">
                     <div class="copyright-wrapper">
-                        <p>&copy; 2024 Steem Corporation</p>
+                        <span class="copyright-text">&copy; 2024 Steem Corporation</span>
                     </div>
                 </div>
             </div>
