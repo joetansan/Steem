@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Welcome to Steem</title>
+    <link rel="stylesheet" href="css/index.css">
+    <!-- favicon -->
+    <link rel="icon" href="favicon.ico">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 200px);
+            padding: 20px;
+            font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+        }
+
+        .signup-container {
+            max-width: 400px;
+            width: 100%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .signup-container h2 {
+            text-align: center;
+        }
+
+        .signup-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .signup-container input[type="text"],
+        .signup-container input[type="email"],
+        .signup-container input[type="password"],
+        .signup-container input[type="date"] {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .signup-container input[type="checkbox"] {
+            margin: 10px 0;
+        }
+
+        .signup-container .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+
+        .signup-container button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+            width: 48%;
+        }
+
+        .signup-container button + button {
+            margin-left: 4%;
+        }
+
+        .signup-container .link {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .signup-container .link a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .checkbox-container label {
+            margin-left: 8px;
+            cursor: pointer;
+        }
+
+        .checkbox-wrapper {
+            position: relative;
+        }
+
+        .checkbox-wrapper input[type="checkbox"] {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navdiv">
+                <div class="brand">
+                    <a href="index.html">
+                        <img class="logo" src="images/logo.png" alt="Steem Corporation">
+                        <span class="brand_name">Steem</span>
+                    </a>
+                </div>
+                <ul class="nav_links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+                <div class="shopping-cart">
+                    <a href="checkout.html">
+                        <i class="fa-solid fa-cart-shopping fa-2xl"></i>
+                    </a>
+                </div>
+                <div class="profile">
+                    <a href="profile.html">
+                        <i class="fa-solid fa-user fa-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="signup-container">
+            <h2>Welcome to Steem</h2>
+            <form>
+                <input type="text" placeholder="Username*" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password*" required>
+                <input type="date" placeholder="Date of birth*" required>
+                <div class="checkbox-container">
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" id="tosCheckbox" required>
+                        <div class="checkbox-overlay" onclick="document.getElementById('tosCheckbox').click()"></div>
+                    </div>
+                    <label for="tosCheckbox">Agree to TOS</label>
+                </div>
+                <div class="buttons">
+                    <button type="submit">Sign Up</button>
+                    <button type="reset">Clear</button>
+                </div>
+                <div class="link">
+                    <a href="login.html">Click here to get to login page</a>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="wrapper">
+                <div class="footer-widget">
+                    <a href="#">
+                        <img src="images/logo-brand-grey.png" class="footer-logo">
+                    </a>
+                    <p class="desc">
+                        Not affliated with Steam &reg; by Valve Corporation
+                    </p>
+                    <ul class="socials">
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/yawchor_tan/">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-widget">
+                    <h6>Quick Links</h6>
+                    <ul class="links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contactus.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-widget">
+                    <h6>Help &amp; Support</h6>
+                    <ul class="links">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Support Center</a></li>
+                        <li><a href="#">Live Chat</a></li>
+                        <li><a href="#">Terms &amp; Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="copyright-wrapper">
+                    <span class="copyright-text">&copy; 2024 Steem Corporation</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<!-- Icon sources -->
+<script src="https://kit.fontawesome.com/ed145d6741.js" crossorigin="anonymous"></script>
+
+</html>
