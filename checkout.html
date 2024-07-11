@@ -3,8 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" 
           content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href=
-"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         .checkout-form {
             font-family: Arial, sans-serif;
@@ -24,12 +23,18 @@
             font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
         }
 
+        .container1 p a {
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 700;
+            color: #fff;
+        }
+
         h2 {
             margin-bottom: 20px;
             text-align: center;
+            color: #c6d4df;
         }
-
-
 
         .checkout-form {
             display: flex;
@@ -45,6 +50,7 @@
         label {
             display: block;
             margin-bottom: 5px;
+            color: #c6d4df;
         }
 
         input[type="text"],
@@ -52,8 +58,11 @@
             width: calc(100% - 25px);
             padding: 10px;
             box-sizing: border-box;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #fff;
+            border: 1px solid #000;
+            border-radius: 3px;
+            box-shadow: 1px 1px 0px #45556c;
         }
 
         .form-group i {
@@ -63,16 +72,22 @@
         button {
             width: 96%;
             padding: 15px;
-            background-color: #28a745;
+            background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
+            background-position: 25%;
+            background-size: 330% 100%;
             border: none;
-            color: #fff;
+            color: #c6d4df;
             font-size: 16px;
             cursor: pointer;
             border-radius: 4px;
         }
 
         button:hover {
-            background-color: #218838;
+            background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
+            background-position: 0%;
+            background-size: 330% 100%;
+            background-color: #1a44c2;
+            color: #fff;
         }
 
         h3 {
@@ -81,8 +96,44 @@
             padding-bottom: 10px;
             margin-bottom: 20px;
             font-size: 20px;
+            color: #c6d4df;
         }
 
+        .row {
+        display: -ms-flexbox; 
+        display: flex;
+        -ms-flex-wrap: wrap; 
+        flex-wrap: wrap;
+        margin: 0 -16px;
+
+        }
+        .col-25 {
+        -ms-flex: 25%; 
+        flex: 25%;
+        max-width: 500px;
+        }
+
+        .col-50 {
+        -ms-flex: 50%;
+        flex: 50%;
+        }
+
+        .col-75 {
+        -ms-flex: 75%; 
+        flex: 75%;
+        }
+
+        .col-25,
+        .col-50,
+        .col-75 {
+        padding: 0 16px;
+        }
+        
+        .price {
+            font-weight: 700;
+            color: #c6d4df;
+        }
+        
         @media (min-width: 600px) {
             .form-group {
                 width: 48%;
@@ -103,34 +154,6 @@
                 padding: 40px;
             }
         }
-        .row {
-        display: -ms-flexbox; 
-        display: flex;
-        -ms-flex-wrap: wrap; 
-        flex-wrap: wrap;
-        margin: 0 -16px;
-        }
-        .col-25 {
-        -ms-flex: 25%; 
-        flex: 25%;
-        }
-
-        .col-50 {
-        -ms-flex: 50%;
-        flex: 50%;
-        }
-
-        .col-75 {
-        -ms-flex: 75%; 
-        flex: 75%;
-        }
-
-        .col-25,
-        .col-50,
-        .col-75 {
-        padding: 0 16px;
-        }
-
             
 </style>
 <html>
@@ -243,7 +266,7 @@
                             <div class="form-group">
                                 <label for="zip">
                                 <i class="fas fa-map-pin"></i>
-                                Zip Code
+                                Postal Code
                                 </label>
                                 <input type="text" id="zip" 
                                     name="zip" required placeholder="E.g. 01234">
