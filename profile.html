@@ -22,12 +22,13 @@
             max-width: 400px;
             width: 100%;
             padding: 20px;
-            border: 1px solid #ccc;
+            border: none;
             border-radius: 5px;
-            background-color: #f9f9f9;
+            background-color: #181a21;
+            color: #1999ff;
         }
 
-        .signup-container h2 {
+        .signup-container h3 {
             text-align: center;
         }
 
@@ -42,8 +43,16 @@
         .signup-container input[type="date"] {
             margin: 10px 0;
             padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            border-radius: 2px;
+            background-color: #32353c;
+            color: #afafaf;
+            border-style: none;
+        }
+
+        .signup-container input[type="text"]::placeholder,
+        .signup-container input[type="email"]::placeholder,
+        .signup-container input[type="password"]::placeholder {
+            color: #afafaf;
         }
 
         .signup-container input[type="checkbox"] {
@@ -59,11 +68,17 @@
         .signup-container button {
             padding: 10px;
             border: none;
-            border-radius: 5px;
-            background-color: #333;
+            border-radius: 2px;
+            position: relative;
+            background: linear-gradient(90deg, #06BFFF 0%, #2D73FF 100%);
             color: white;
             cursor: pointer;
             width: 48%;
+            font-weight: 525;
+        }
+
+        .signup-container button:hover {
+
         }
 
         .signup-container button + button {
@@ -76,7 +91,7 @@
         }
 
         .signup-container .link a {
-            color: #333;
+            color: #afafaf;
             text-decoration: none;
         }
 
@@ -89,6 +104,8 @@
         .checkbox-container label {
             margin-left: 8px;
             cursor: pointer;
+            color: #afafaf;
+            font-size: 14px;
         }
 
         .checkbox-wrapper {
@@ -131,7 +148,7 @@
     </header>
     <main>
         <div class="signup-container">
-            <h2>Welcome to Steem</h2>
+            <h3>Welcome to Steem</h3>
             <form>
                 <input type="text" placeholder="Username*" required>
                 <input type="email" placeholder="Email" required>
@@ -142,7 +159,7 @@
                         <input type="checkbox" id="tosCheckbox" required>
                         <div class="checkbox-overlay" onclick="document.getElementById('tosCheckbox').click()"></div>
                     </div>
-                    <label for="tosCheckbox">Agree to TOS</label>
+                    <label for="tosCheckbox">Agree to Terms of Service</label>
                 </div>
                 <div class="buttons">
                     <button type="submit">Sign Up</button>
