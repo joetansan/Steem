@@ -33,6 +33,7 @@
         }
 
         .signup-container form {
+            /* makes it easier to design flexible responsive layout structure without using float or positioning*/
             display: flex;
             flex-direction: column;
         }
@@ -43,12 +44,15 @@
         .signup-container input[type="date"] {
             margin: 10px 0;
             padding: 10px;
-            border-radius: 2px;
+            /* make border round */
+            border-radius: 2px; 
             background-color: #32353c;
             color: #afafaf;
+            /* remove bottom and right border */
             border-style: none;
         }
 
+        /* ::placeholder CSS pseudo-element represents the placeholder text in input or textarea element */
         .signup-container input[type="text"]::placeholder,
         .signup-container input[type="email"]::placeholder,
         .signup-container input[type="password"]::placeholder {
@@ -70,6 +74,7 @@
             border: none;
             border-radius: 2px;
             position: relative;
+            /* background of button copied from yc for consistent color scheme */
             background: linear-gradient(90deg, #06BFFF 0%, #2D73FF 100%);
             color: white;
             cursor: pointer;
@@ -92,6 +97,7 @@
 
         .signup-container .link a {
             color: #afafaf;
+            /* set text underline style */
             text-decoration: none;
         }
 
