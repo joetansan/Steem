@@ -1,30 +1,160 @@
 <!DOCTYPE html>
-<style>
-    .basket{
-        width:50%;
-        float:left;
-        color: #dcdedf;
-    }
-     .form{
-        width:50%;
-        float:left;
-        color: #dcdedf;
-    }
-    #BoldUnder{
-        font-weight: bold;
-        text-decoration: underline;
-        color: #dcdedf;
-        font-size: 20px;
-        font-weight: 650;
-        text-transform: uppercase;
-        transition: color 0.3s;
-    
-    }
-    .pay{
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .checkout-form {
+            font-family: Arial, sans-serif;
+            background-color: #171d25;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .container1 {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #171d25;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color:white;
+            font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+        }
+
+        .container1 p a {
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: #c6d4df;
+        }
+
+        .checkout-form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .form-group {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #c6d4df;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: calc(100% - 25px);
+            padding: 10px;
+            box-sizing: border-box;
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #fff;
+            border: 1px solid #000;
+            border-radius: 3px;
+            box-shadow: 1px 1px 0px #45556c;
+        }
+
+        .form-group i {
+            margin-right: 10px;
+        }
+
+        button {
+            width: 96%;
+            padding: 15px;
+            background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
+            background-position: 25%;
+            background-size: 330% 100%;
+            border: none;
+            color: #c6d4df;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
+            background-position: 0%;
+            background-size: 330% 100%;
+            background-color: #1a44c2;
+            color: #fff;
+        }
+
+        h3 {
+            width: 100%;
+            border-bottom: 2px solid #f4f4f4;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 20px;
+            color: #c6d4df;
+        }
+
+        .row {
+        display: -ms-flexbox; 
         display: flex;
-        justify-content: space-evenly;
-    }
-    
+        -ms-flex-wrap: wrap; 
+        flex-wrap: wrap;
+        margin: 0 -16px;
+
+        }
+        .col-25 {
+        -ms-flex: 25%; 
+        flex: 25%;
+        max-width: 500px;
+        }
+
+        .col-50 {
+        -ms-flex: 50%;
+        flex: 50%;
+        }
+
+        .col-75 {
+        -ms-flex: 75%; 
+        flex: 75%;
+        }
+
+        .col-25,
+        .col-50,
+        .col-75 {
+        padding: 0 16px;
+        }
+        
+        .price {
+            font-weight: 700;
+            color: #c6d4df;
+        }
+        
+        @media (min-width: 600px) {
+            .form-group {
+                width: 48%;
+            }
+
+            .form-group.full-width {
+                width: 100%;
+            }
+
+            button {
+                width: 48%;
+                margin-top: 20px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 40px;
+            }
+        }
+            
 </style>
 <html>
     <head>
@@ -51,7 +181,7 @@
                         <li><a href="contactus.html">Contact Us</a></li>
                     </ul>
                     <div class="shopping-cart">
-                        <a href="payment.html">
+                        <a href="Checkout.html">
                             <i class="fa-solid fa-cart-shopping fa-2xl"></i>
                         </a>
                     </div>
@@ -63,103 +193,194 @@
                 </div>
             </nav>
         </header>
-        <div class="pay">
-            <div class="basket">
-                <h1 id="BoldUnder">Your Basket</h1>
-                <p>(placeholder)</p>
-            </div>
-            <div class="form">
-                <form method="get" action="thankyou.html">
-                    <table border="1" cellspacing="0" cellpadding="5">
-                        <tr>
-                            <td align="right"><label for="myName">*Name:</label></td>
-                            <td><input type="text" name="myName" id="myName" required placeholder="E.g. John Doe" tabindex="1" ></td>
-                        </tr>
-                        <tr>
-                            <td align="right"><label for="myEmail">*E-mail:</label></td>
-                            <td><input type="Email" name="myEmail" id="myEmail"	required placeholder="John@123.com" tabindex="2" ></td>
-                        </tr>
-                        <tr>
-                            <td align="right"><label for="card">*Card no.:</label></td>
-                            <td><input name="card" id="card"	required placeholder="1234 5678" tabindex="3" ></td>
-                        </tr>
-                        <tr>
-                            <td align="right"><label for="security">*Security code:</label></td>
-                            <td><input name="card" id="card"	required placeholder="1234" tabindex="4"></td>
-                        </tr>
-                        <tr>
-                            <td>
-                            </td>
-                            <td>
-                                <label><input type="checkbox" name="TOS" required tabindex="4">*Do you agree to our terms of service? </label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>
-                                <input type="submit" value="Submit"/>
-                                <input type="reset" value="Reset"/>
-                            </td>
-                        </tr>
-                    </table>
-                </form>
 
-            </div>
-        </div>
-        <footer>
-            <div class="container">
-                <div class="wrapper">
-                    <div class="footer-widget">
-                        <a href="#">
-                            <img src="images/logo-brand-grey.png" class="footer-logo">
-                        </a>
-                        <p class="desc">
-                            Not affliated with Steam &reg; by Valve Corporation
-                        </p>
-                        <ul class="socials"> 
-                            <li>
-                                <a href="#">
-                                    <i class="fa-brands fa-x-twitter"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa-brands fa-facebook-f"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.instagram.com/yawchor_tan/">
-                                    <i class="fa-brands fa-instagram"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer-widget">
-                        <h6>Quick Links</h6>
-                        <ul class="links">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="contactus.html">Contact Us</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-widget">
-                        <h6>Help &amp; Support</h6>
-                        <ul class="links">
-                            <li><a href="#">FAQ</a></li>
-                            <li><a href="#">Support Center</a></li>
-                            <li><a href="#">Live Chat</a></li>
-                            <li><a href="#">Terms &amp; Conditions</a></li>
-                        </ul>
+            <div class="row">
+                <div class="col-25">
+                    <div class="container1">
+                    <h4>Cart
+                        <span class="price" style="color:whitesmoke">
+                        <i class="fa fa-shopping-cart"></i>
+                        <b>4</b>
+                        </span>
+                    </h4>
+                    <p><a href="#">Product 1</a> <span class="price">$15</span></p>
+                    <p><a href="#">Product 2</a> <span class="price">$15</span></p>
+                    <p><a href="#">Product 3</a> <span class="price">$15</span></p>
+                    <p><a href="#">Product 4</a> <span class="price">$15</span></p>
+                    <hr>
+                    <p>Total <span class="price" style="color:white"><b>$60</b></span></p>
+
                     </div>
                 </div>
-                <div class="copyright">
-                    <div class="copyright-wrapper">
-                        <span class="copyright-text">&copy; 2024 Steem Corporation</span>
+
+
+                    <div class="container1">
+                        <form class="checkout-form" method="get" action="thankyou.html">
+                            <h2>Checkout Form</h2>
+                            <h3>Address Details</h3>
+                            <div class="form-group">
+                                <label for="name">
+                                <i class="fas fa-user"></i>
+                                Full Name
+                                </label>
+                                <input type="text" id="name" 
+                                    name="name" required placeholder="E.g. John Doe">
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="email">
+                                <i class="fas fa-envelope"></i>
+                                    Email
+                                </label>
+                                <input type="email" id="email" 
+                                    name="email" required placeholder="E.g. JohnDoe@Mail.com">
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="address">
+                                <i class="fas fa-address-card"></i>
+                                Address
+                                </label>
+                                <input type="text" id="address" 
+                                    name="address" required placeholder="E.g. 123 ABC Street">
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="city">
+                                <i class="fas fa-city"></i>
+                                City
+                                </label>
+                                <input type="text" id="city" 
+                                    name="city" required placeholder="E.g. China">
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="state">
+                                <i class="fas fa-map-marker-alt"></i>
+                                State(Type nil if not applicable)
+                                </label>
+                                <input type="text" id="state" 
+                                    name="state" required>
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="zip">
+                                <i class="fas fa-map-pin"></i>
+                                Postal Code
+                                </label>
+                                <input type="text" id="zip" 
+                                    name="zip" required placeholder="E.g. 01234">
+                            </div>
+                
+                            <h3>Payment Information</h3>
+                            <div class="form-group">
+                                <label for="card-name">
+                                <i class="fas fa-user"></i>
+                                Name on Card
+                                </label>
+                                <input type="text" id="card-name" 
+                                    name="card-name" required placeholder="E.g. John Doe">
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="card-number">
+                                <i class="fas fa-credit-card"></i>
+                                Credit Card Number
+                                </label>
+                                <input type="text" id="card-number" 
+                                    name="card-number" required placeholder="0000 0000 0000 0000">
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="exp-month">
+                                <i class="fas fa-calendar-alt"></i>
+                                Exp Month
+                                </label>
+                                <input type="text" id="exp-month" 
+                                    name="exp-month" required placeholder="12">
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="exp-year">
+                                <i class="fas fa-calendar-alt"></i>
+                                Exp Year
+                                </label>
+                                <input type="text" id="exp-year" 
+                                    name="exp-year" required placeholder="2034"> 
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="cvv">
+                                <i class="fas fa-lock"></i>
+                                CVV
+                                </label>
+                                <input type="text" id="cvv" 
+                                    name="cvv" required placeholder="1234">
+                            </div>
+                
+                            <button type="submit">
+                            Place Order
+                            </button>
+                        </form>
                     </div>
                 </div>
-            </div>
-        </footer>
-    </body>
+            </div>    
+        </body>
+        <tail>
+            <footer>
+                <div class="container">
+                    <div class="wrapper">
+                        <div class="footer-widget">
+                            <a href="#">
+                                <img src="images/logo-brand-grey.png" class="footer-logo">
+                            </a>
+                            <p class="desc">
+                            This is definitely not a rip off of steam.
+                            </p>
+                            <ul class="socials"> 
+                                <li>
+                                    <a href="#">
+                                        <i class="fa-brands fa-x-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/tayernest.23/">
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/yawchor_tan/">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-widget">
+                            <h6>Quick Links</h6>
+                            <ul class="links">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="contactus.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-widget">
+                            <h6>Help &amp; Support</h6>
+                            <ul class="links">
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Support Center</a></li>
+                                <li><a href="#">Live Chat</a></li>
+                                <li><a href="#">Terms &amp; Conditions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="copyright">
+                        <div class="copyright-wrapper">
+                            <span class="copyright-text">&copy; 2024 Steem Corporation</span>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </tail>
     <!-- Icon sources -->
     <script src="https://kit.fontawesome.com/ed145d6741.js" crossorigin="anonymous"></script>
 </html>
