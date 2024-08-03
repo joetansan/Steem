@@ -6,7 +6,7 @@
 @font-face {
     font-family: "Motiva Sans";
     src: url(fonts/MotivaSans-Regular.ttf) format("truetype");
-  }
+}
   
 
 body {
@@ -176,8 +176,14 @@ td {
     font-size: 1.1em;
     max-width: 120px;
     font-weight: 500;
-    cursor: pointer; /* cool cursor magic */
-    padding: 14px 15px;
+    cursor: pointer; /* cool cursor magic; makes the whole button look clickable */
+    padding: 10px 11px;
+    text-align: center;
+    align-self: flex-end;
+}
+
+.product-buy a {
+    color: inherit;
 }
 
 .product-buy:hover {
