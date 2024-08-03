@@ -133,11 +133,21 @@ td {
 .product-card {
     display: flex;
     flex-direction: column;
-    background-color: #16202d;
+    background-color: #000;
     border-radius: 4px;
     overflow: hidden;
     transition: transform 0.2s;
     height: 100%;
+}
+
+td a {
+    height: 100%;
+    cursor: pointer;
+    display: block;
+}
+
+td a:visited {
+    color: #c6d4df;
 }
 
 .product-card:hover {
@@ -157,19 +167,37 @@ td {
     flex-grow: 1;
 }
 
+.product-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 5px;
+}
+
+.product-name-price {
+    display: flex;
+    flex-direction: column;
+}
+
 .product-name {
-    font-weight: bold;
-    margin-bottom: 5px;
+    font-weight: 700;
 }
 
 .product-price {
-    color: #a4d007;
-    margin-top: auto;
+    margin-top: 4px;
+    color: #c6d4df;
+    font-weight: normal;
 }
 
 .product-buy {
-    background: rgba(103, 193, 245, 0.2);
-    color: #67c1f5;
+    display: flex;
+    align-items: center;
+}
+
+.buy-button {
+    background: linear-gradient(to right, #75b022 5%, #588a1b 95%);
+    color: #d2efa9;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
     border: none;
     border-radius: 2px;
     box-shadow: none;
@@ -177,17 +205,18 @@ td {
     max-width: 120px;
     font-weight: 500;
     cursor: pointer; /* cool cursor magic; makes the whole button look clickable */
-    padding: 10px 11px;
-    text-align: center;
-    align-self: flex-end;
+    padding: 10px 12px;
+    /* margin: 0 10px 10px 0; */
+    /* text-align: center; */
+    /* align-self: flex-end; */
 }
 
-.product-buy a {
-    color: inherit;
+.buy-button:visited {
+    color: #d2efa9;
 }
 
-.product-buy:hover {
-    background: linear-gradient(-60deg, #417a9b 5%, #67c1f5 95%);
+.buy-button:hover {
+    background: linear-gradient(to right, #8ed629 5%, #6aa621 95%);
     color: #fff;
 }
 
@@ -197,7 +226,20 @@ td {
     padding: 2px 4px;
     border-radius: 2px;
     font-size: 0.8em;
+    font-weight: 600;
     align-self: flex-start;
+}
+
+.old-price {
+    color: #738895;
+    border-radius: 2px;
+    font-size: 0.8em;
+    align-self: flex-start;
+    text-decoration: line-through;
+}
+
+.discounted-price {
+    color: #a4d007;
 }
 
 @media (max-width: 768px) {
