@@ -1,3 +1,105 @@
+* {
+    text-decoration: none; /* remove text underline */
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Motiva Sans";
+    src: url(fonts/MotivaSans-Regular.ttf) format("truetype");
+}
+  
+
+body {
+    margin: 0px 0px 0px 0px;
+    padding: 0;
+    background: #1b2838;
+    min-height: 100vh;
+
+}
+
+/* NAVIGATION BAR ######################################################## */
+
+.navbar {
+    background-color: #171d25;
+    font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+    /* i dont think we need this - yc
+    padding-left: 15px; 
+    padding-right: 15px;
+    */
+    margin: 0;
+    padding: 0;
+}
+
+/* div for nav */
+.navdiv {
+    display: flex;  
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.nav_links {
+    display: flex;
+    /*justify-content: space-evenly;*/ /* along main axis */
+    align-items: flex-start; /* along cross axis*/
+    flex-grow: 1; /* so that the last item grows in space */
+    gap: 2em;
+}
+
+/* list containing links */
+.navdiv ul li {
+    list-style: none;
+}
+
+/* Links */
+.navdiv .nav_links li a {
+    color: #dcdedf;
+    font-size: 20px;
+    font-weight: 650;
+    text-transform: uppercase;
+    transition: color 0.3s;
+    /*margin: 20px;*/
+}
+
+.brand a {
+    display: flex;
+    align-items: center;
+}
+
+.brand a .logo {
+    /* padding takes values in this order: top, right, bottom, left */
+    padding: 10px 30px 10px;
+    height: 75px;   
+}
+.brand_name {   
+    color: #b4b4b4; 
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+div.shopping-cart a {
+    color: #dcdedf;
+}
+
+div.profile a {
+    color: #dcdedf;
+}
+
+div.shopping-cart {
+    margin-right: 30px;
+}
+
+div.profile {
+    margin-right: 30px;
+}
+
+/* links turn white when hovered over */
+ul.nav_links a:hover {
+    color: #ffffff;
+}
+
+/* ################################# */
 
 .container {
     width: 100%;
@@ -116,3 +218,138 @@ video {
 }
 
 
+/* FOOTER ############################################ */
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-top: 80px;
+    background-color: #171d25;
+}
+
+.container {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 12px;
+    color: #ffffff;
+    font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.wrapper .footer-widget {
+    width: calc(20% - 30px);
+    margin: 0 15px 50px;
+    padding: 0 12px;
+}
+
+/* get the first index's */
+.wrapper .footer-widget:nth-child(1) {
+    width: calc(40% - 50px);
+    margin-right: 15px;
+}
+
+.wrapper .footer-widget .footer-logo {
+    height: 120px;
+    vertical-align: middle;
+}
+
+.wrapper .footer-widget p {
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.wrapper .footer-widget .socials {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.wrapper .footer-widget .socials li {
+    list-style: none;
+}
+
+.wrapper .footer-widget .socials li a {
+    width: 44px;
+    height: 44px;
+    margin-right: 10px;
+    color: #ffffff;
+    background-color: rgba(27, 40, 56, 0.7);
+    border-radius: 50%;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .footer-widget .socials li a:hover {
+    background-color: rgba(35, 52, 72, 0.8);;
+}
+
+.wrapper .footer-widget h6 {
+    color: #adb9c2;
+    margin: 10px 0 35px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.wrapper .footer-widget .links {
+    padding-left: 0
+}
+
+.wrapper .footer-widget .links li {
+    list-style: none;
+}
+
+.wrapper .footer-widget .links li a {
+    color: #c6d4df;
+    font-size: 16px;
+    text-transform: capitalize;
+    line-height: 32px;
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .footer-widget .links li a:hover {
+    color: #ffffff;
+}
+
+.copyright-wrapper {
+    padding: 20px 0;
+    border-top: 1px solid #223245;
+    color: #8f98a0;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Responsive web design (footer only)*/
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+        
+    .wrapper .footer-widget,
+    .wrapper .footer-widget:nth-child(1) {
+        width: calc(50% - 30px);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 720px;
+        margin: 0 10px 50px;
+    }
+}
