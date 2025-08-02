@@ -1,0 +1,112 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 200px);
+    padding: 20px;
+    font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+}
+
+.signup-container {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #181a21;
+    color: #1999ff;
+}
+
+.signup-container h3 {
+    text-align: center;
+}
+
+.signup-container form {
+    /* makes it easier to design flexible responsive layout structure without using float or positioning*/
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-container input[type="text"],
+.signup-container input[type="email"],
+.signup-container input[type="password"],
+.signup-container input[type="date"] {
+    margin: 10px 0;
+    padding: 10px;
+    /* make border round */
+    border-radius: 2px; 
+    background-color: #32353c;
+    color: #afafaf;
+    /* remove bottom and right border */
+    border-style: none;
+}
+
+/* ::placeholder CSS pseudo-element represents the placeholder text in input or textarea element */
+.signup-container input[type="text"]::placeholder,
+.signup-container input[type="email"]::placeholder,
+.signup-container input[type="password"]::placeholder {
+    color: #afafaf;
+}
+
+.signup-container input[type="checkbox"] {
+    margin: 10px 0;
+}
+
+.signup-container .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.signup-container button {
+    padding: 10px;
+    border: none;
+    border-radius: 2px;
+    position: relative;
+    /* background of button copied from yc for consistent color scheme */
+    background: linear-gradient(90deg, #06BFFF 0%, #2D73FF 100%);
+    color: white;
+    cursor: pointer;
+    width: 48%;
+    font-weight: 525;
+}
+
+.signup-container button:hover {
+    background: linear-gradient(90deg, #06BFFF 30%, #2D73FF 100%);
+}
+
+.signup-container button + button {
+    margin-left: 4%;
+}
+
+.signup-container .link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.signup-container .link a {
+    color: #afafaf;
+    /* set text underline style */
+    text-decoration: none;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.checkbox-container label {
+    margin-left: 8px;
+    cursor: pointer;
+    color: #afafaf;
+    font-size: 14px;
+}
+
+.checkbox-wrapper {
+    position: relative;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+    cursor: pointer;
+}
